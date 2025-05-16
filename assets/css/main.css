@@ -920,7 +920,7 @@ section,
   justify-content: center;
 }
 
-.hero img {
+.alsoaimage{
   position: absolute;
   inset: 0;
   display: block;
@@ -1841,6 +1841,116 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+
+
+
+
+
+
+
+.mainimageinbetweenall {
+  text-align: center;
+  padding: 20px;
 }
+
+.mainimageinbetweenall img {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.7)); /* glowing effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+.mainimageinbetweenall img:hover {
+  transform: scale(1.05);
+}
+
+.mainimageinbetweenall h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(0, 191, 255, 0.6); /* text glow */
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .mainimageinbetweenall img {
+    width: 220px;
+  }
+
+  .mainimageinbetweenall h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainimageinbetweenall img {
+    width: 280px;
+  }
+
+  .mainimageinbetweenall h3 {
+    font-size: 2.2rem;
+  }
+}
+/* Base Toast Style */
+.hoveringandopening p {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hoveringandopening:hover p {
+  color: #007BFF;
+  font-weight: bold;
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* optional glow */
+}
+.hoveringandopening2 p {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hoveringandopening2:hover p {
+  color: red;
+  font-weight: bold;
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.3); /* optional glow */
+}
+.custom-toast {
+  visibility: hidden;
+  min-width: 280px;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 10px;
+  padding: 14px 24px;
+  position: fixed;
+  z-index: 9999;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+/* When toast is shown */
+.custom-toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Blue Theme */
+.custom-toast.blue {
+  background-color: #007BFF;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Orange Theme */
+.custom-toast.orange {
+  background-color: #FF5722;
+  box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+}
+
