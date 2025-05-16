@@ -207,3 +207,34 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+function showToast(message, type = "blue") {
+  const toast = document.getElementById("customToast");
+  toast.textContent = message;
+
+  toast.className = "custom-toast show"; // Reset
+  toast.classList.add(type); // Add blue/orange theme
+
+  // Show toast
+  setTimeout(() => {
+    toast.classList.remove("show");
+  }, 3000);
+}
+
+function copyPhoneNumber() {
+  const number = document.getElementById("phoneNumber").innerText;
+  navigator.clipboard.writeText(number).then(() => {
+    showToast("Phone number copied to clipboard!", "blue");
+  }).catch(err => {
+    console.error("Failed to copy: ", err);
+  });
+}
+
+function copyEmail() {
+  const email = document.getElementById("phoneNumber2").innerText;
+  navigator.clipboard.writeText(email).then(() => {
+    showToast("Email copied to clipboard!", "orange");
+  }).catch(err => {
+    console.error("Failed to copy: ", err);
+  });
+}
